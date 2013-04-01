@@ -20,11 +20,11 @@ class String(str):
 
     @property
     def width(self):
-        return self.length
+        return max(len(l) for l in self.splitlines())
 
     @property
     def height(self):
-        return self.length
+        return len(self.splitlines())
 
     @property
     def area(self):
